@@ -22,13 +22,9 @@ def reverse_array(array)
 end
 
 def kesha_maker(array)
-  dollar_sign = "$"
-  kesha = []
   array.each do |word|
-    word[2] = dollar_sign
-    kesha << word
+    word[2] = "$"
   end
-kesha
 end
 
 def find_a(array)
@@ -42,15 +38,19 @@ def find_a(array)
 end
 
 def sum_array(array)
-  array.sum
+  sum = 0
+  array.each do |num|
+    sum += num
+  end
+  sum
 end
 
 def add_s(array)
-  array.each_with_index do |word, index|
-    if index == 1
+  array.collect do |word|
+    if array[1] == word
       word
     else
-       word.insert(-1, "s")
+       word + "s"
     end
   end
 end
