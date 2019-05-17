@@ -34,14 +34,11 @@ kesha
 end
 
 def find_a(array)
-  a_words = []
-  array.collect do |word|
-    if word.start_with?("a")
-      a_words << word
+  array.find_all do |word|
+    word[0] == "a"
     end
   end
-  a_words
-end
+
 
 def sum_array(array)
   sum = 0
