@@ -1,4 +1,3 @@
-require 'pry'
 
 def sort_array_asc(array)
   array.sort
@@ -52,15 +51,6 @@ def sum_array(array)
   sum
 end
 
-def add_s(array)
-  array.collect do |word|
-    if array[1] == word
-      word
-    else
-       word + "s"
-    end
-  array.sum
-end
 
 def add_s(array)
   array.each_with_index do |word, index|
