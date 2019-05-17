@@ -25,6 +25,13 @@ def kesha_maker(array)
   array.each do |word|
     word[2] = "$"
   end
+  dollar_sign = "$"
+  kesha = []
+  array.each do |word|
+    word[2] = dollar_sign
+    kesha << word
+  end
+kesha
 end
 
 def find_a(array)
@@ -52,5 +59,15 @@ def add_s(array)
     else
        word + "s"
     end
-  end
+  array.sum
 end
+
+def add_s(array)
+  array.each_with_index do |word, index|
+    if array[1] == word
+      word
+    else
+      word + "s"
+    end
+  end
+end 
